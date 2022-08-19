@@ -1,8 +1,32 @@
+function isValidURL(string) {
+  var res = string.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
+  return (res !== null)
+}
+
+const urlPageBtn = document.getElementById('url-page')
+const textPageBtn = document.getElementById('text-page')
+
+
+textPageBtn.addEventListener('click', function() {
+  const urlPage = document.getElementById('url')
+  const textPage = document.getElementById('text')
+  textPage.classList.remove('novisible')
+  urlPage.classList.add('novisible')
+})
+
+urlPageBtn.addEventListener('click', function() {
+  const urlPage = document.getElementById('url')
+  const textPage = document.getElementById('text')
+  urlPage.classList.remove('novisible')
+  textPage.classList.add('novisible')
+})
+
+
 const btn = document.getElementById("btn");
 
 btn.addEventListener("click", function () {
   let website = document.getElementById("website").value;
-  if (website) {
+  if (isValidURL(website)) {
     let qrcode = document.getElementById("qrcode");
     let fcolor = document.getElementById('fcolor').value 
     let bcolor = document.getElementById('bcolor').value 
@@ -19,7 +43,6 @@ btn.addEventListener("click", function () {
       size: size,
       value: website,
     });
-    document.getElementById("qrcode-container").style.display = "block";
   } else {
     alert("Please enter a valid URL");
   }

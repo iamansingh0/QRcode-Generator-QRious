@@ -11,27 +11,59 @@
 </head>
 
 <body>
-    <div class="container">
-        <h1 id="hi-heading">URL QR Code Generator</h1>
-        <form>
-            <input type="url" name="website" id="website" placeholder="Enter URL">
-            <hr>
-            <label>Choose Color: </label>
-            <input type="color" name="fcolor" id="fcolor">
-            <br>
-            <label>Choose Background Color: </label>
-            <input type="color" name="bcolor" id="bcolor">
-            <br>
-            <label>Size in px: </label>
-            <input type="range" value="128" min="10" max="1000" oninput="this.nextElementSibling.value = this.value" id="size">
-            <output>128</output>
-            <br>
-            <button type="button" id="btn">
-                Generate QR Code
-            </button>
-        </form>
-        <div id="qrcode-container">
-            <canvas id="qrcode" class="qrcode"></canvas>
+    <h1 id="hi-heading">QR Code Generator</h1>
+    <div class="types">
+        <ul>
+            <li>
+                <a href="#url" id="url-page">URL</a>
+            </li>
+            <li>
+                <a href="#text" id="text-page">Any Text</a>
+            </li>
+        </ul>
+    </div>
+    <div class="container" id="url">
+        <div class="left">
+            <form>
+                <input type="url" name="website" id="website" placeholder="Enter URL" class="inputData">
+                <label class="label-fcolor">Choose Color: </label>
+                <input type="color" name="fcolor" id="fcolor">
+                <label>Choose Background Color: </label>
+                <input type="color" name="bcolor" id="bcolor">
+                <label>Size in px: </label>
+                <input type="range" value="128" min="10" max="1000" oninput="this.nextElementSibling.value = this.value" id="size">
+                <output>128</output>
+                <button type="button" id="btn">
+                    Generate QR Code
+                </button>
+            </form>
+        </div>
+        <div class="right">
+            <div id="qrcode-container" class="qrbox">
+                <canvas id="qrcode" class="qrcode"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="container novisible" id="text">
+        <div class="left">
+            <form>
+                <input type="text" name="text" id="anytext" placeholder="Enter Text" class="inputData">
+                <label class="label-fcolor">Choose Color: </label>
+                <input type="color" name="fcolor" id="fcolor-text">
+                <label>Choose Background Color: </label>
+                <input type="color" name="bcolor" id="bcolor-text">
+                <label>Size in px: </label>
+                <input type="range" value="128" min="10" max="1000" oninput="this.nextElementSibling.value = this.value" id="size-text">
+                <output>128</output>
+                <button type="button" id="btn-text">
+                    Generate QR Code
+                </button>
+            </form>
+        </div>
+        <div class="right">
+            <div id="qrcode-container-text" class="qrbox">
+                <canvas id="qrcode-text" class="qrcode"></canvas>
+            </div>
         </div>
     </div>
     <script src="app.js"></script>
