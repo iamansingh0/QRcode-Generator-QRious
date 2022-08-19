@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL QR Code Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="hi-heading">URL QR Code Generator</h1>
+        <form>
+            <input type="url" name="website" id="website" placeholder="Enter URL">
+            <hr>
+            <label>Choose Color: </label>
+            <input type="color" name="fcolor" id="fcolor">
+            <br>
+            <label>Choose Background Color: </label>
+            <input type="color" name="bcolor" id="bcolor">
+            <br>
+            <label>Size in px: </label>
+            <input type="range" value="128" min="10" max="1000" oninput="this.nextElementSibling.value = this.value" id="size">
+            <output>128</output>
+            <br>
+            <button type="button" id="btn">
+                Generate QR Code
+            </button>
+        </form>
+        <div id="qrcode-container">
+            <canvas id="qrcode" class="qrcode"></canvas>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

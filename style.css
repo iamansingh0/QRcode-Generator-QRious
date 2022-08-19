@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    margin: auto;
+    /* height: 100vh; */
+    align-items: center;
+    border: 2px black;
+    border-style: solid;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+}
+
+h1 {
+    background-color: navy;
+    width: 70%;
+    text-align: center;
+    color: white;
+    height: 10vh;
+    margin-top: 2vh;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
