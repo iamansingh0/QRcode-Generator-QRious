@@ -42,7 +42,7 @@ canvas {
 }
 
 h1 {
-  background-color: navy;
+  background-color: #005CC8;
   width: 70%;
   text-align: center;
   color: white;
@@ -90,7 +90,7 @@ h1 {
   content: "";
   display: block;
   height: 5px;
-  background: navy;
+  background: #005CC8;
   opacity: 0;
   transition: opacity 300ms ease-in-out;
   position: relative;
@@ -133,29 +133,45 @@ output {
   padding: 10px;
   border-radius: 4px;
   font-size: 1rem;
+  outline: none;
+  border: none;
+  background-color: rgb(235, 233, 233);
 }
 
 .label-fcolor,
 .label-bcolor,
 .label-size {
   /* border: 1px solid black; */
-  color: navy;
+  color: #005CC8;
 }
 
 .sizee {
   width: 70%;
 }
 
-output {
-  position: relative;
-  bottom: 2vh;
+.div {
+  display: flex;
+  height: 5vh;
+  align-items: center;
 }
+
 
 .getcode {
   height: 6vh;
-  background-color: navy;
+  background-color: #005CC8;
   border-radius: 4px;
   color: white;
   font-size: 1.1rem;
   cursor: pointer;
+  border: none;
+}
+.qrcode-container {
+  display: flex;
+  justify-content: center;
+}
+.qrcode {
+  /* width: 100vw; */
+  /* border: 1px solid black; */
+  margin-bottom: 10vh;
+  margin-right: 10vw;
 }
